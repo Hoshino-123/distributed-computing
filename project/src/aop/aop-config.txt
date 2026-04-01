@@ -1,0 +1,10 @@
+# ==========================================
+# 1. 全局增强
+*#drive.before=print:📢 正在为您匹配交通工具...
+*#drive.after=call:aop.Utils.logFinish
+
+# 2. 特定增强
+app.Car#drive.before=call:aop.CarHelper.startEngine
+
+# 3. 另一个全局增强
+*#checkIn.after=print:🔑 房间已预留，祝您居住愉快！
