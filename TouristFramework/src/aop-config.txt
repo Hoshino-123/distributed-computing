@@ -1,0 +1,19 @@
+# 配置文件示例
+# 1.全局增强：格式 *#方法名.增强类型=增强方法
+# 2.特定增强：格式 类名#方法名.增强类型=增强方法
+# 3.增强类型：before、after
+# 增强方法可以是print或call，print表示打印，call表示调用方法
+# 同一个增强类型可以有多个增强方法，使用分号分隔
+
+# 全局增强
+*#drive.before=print:正在为您匹配交通工具...
+*#checkIn.before=print:开始预定住处;print:预定成功;print:正在验证身份
+*#checkIn.after=print:打印发票
+
+
+# 特定增强
+vehicle.Train#drive.before=print:正在为您预定火车票...
+
+
+
+
